@@ -7,18 +7,6 @@
     --cream: #FFFDF5;
   }
 
-@media (max-width: 768px) {
-    :root {
-      /* Меняем переменные для мобильных */
-      --padding-lg: 1rem;
-      --padding-md: 0.75rem;
-      --font-size-lg: 1rem;
-      --font-size-md: 0.875rem;
-.button {
-        padding: 12px 24px;
-        min-width: 48px;
-        min-height: 48px;
-      }
 
 @media (prefers-color-scheme: dark) {
         :root {
@@ -448,23 +436,4 @@
     transform: translateX(26px);
   }
 
-@media (prefers-color-scheme: dark) {
-    :root {
-      --ivory: #1A1A1A; /* Меняем цвета для тёмной темы */
-      --charcoal: #F0F0F0;
-    }
-  }
-.mobile-menu-button {
-    display: none;
-  }
-  @media (max-width: 768px) {
-    .mobile-menu-button {
-      display: block;
-    }
-  }
-  .button {
-    padding: 12px 24px;
-    min-width: 48px;
-    min-height: 48px;
-  }
 
