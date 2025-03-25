@@ -1,0 +1,147 @@
+:root {
+      --gold: #C6A961;
+      --burgundy: #421a24;
+      --ivory: #F8F4E9;
+      --mahogany: #4A0100;
+      --charcoal: #333333;
+      --cream: #FFFDF5;
+    }
+
+    body {
+      font-family: 'Montserrat', sans-serif;
+      background-color: var(--ivory);
+      color: var(--charcoal);
+      margin: 0;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      background-image: url('https://www.transparenttextures.com/patterns/cream-paper.png');
+    }
+
+    .header {
+      background: var(--burgundy);
+      padding: 1.5rem 3rem;
+      border-bottom: 3px solid var(--gold);
+    }
+
+    .logo {
+      font-family: 'Cinzel', serif;
+      font-size: 2rem;
+      color: var(--ivory);
+      letter-spacing: 2px;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      margin: 0;
+    }
+
+    .welcome-container {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      padding: 3rem;
+      text-align: center;
+    }
+
+    .welcome-card {
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
+      padding: 3rem;
+      max-width: 800px;
+      position: relative;
+      margin-bottom: 2rem;
+    }
+
+    .welcome-card::before {
+      content: '';
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      right: 10px;
+      bottom: 10px;
+      border: 1px solid var(--gold);
+      pointer-events: none;
+    }
+
+    .welcome-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--burgundy);
+      font-size: 2.5rem;
+      margin-bottom: 1.5rem;
+      border-bottom: 1px solid var(--gold);
+      padding-bottom: 1rem;
+    }
+
+    .welcome-subtitle {
+      font-family: 'Cinzel', serif;
+      color: var(--mahogany);
+      font-size: 1.2rem;
+      margin-bottom: 2rem;
+      letter-spacing: 1px;
+    }
+
+    .welcome-text {
+      line-height: 1.8;
+      margin-bottom: 2rem;
+      font-size: 1.1rem;
+    }
+
+    .btn-enter {
+      background: var(--burgundy);
+      color: var(--ivory);
+      border: none;
+      padding: 1rem 2.5rem;
+      font-family: 'Cinzel', serif;
+      font-size: 1.1rem;
+      letter-spacing: 1px;
+      cursor: pointer;
+      transition: all 0.3s;
+      text-decoration: none;
+      display: inline-block;
+      margin-top: 1rem;
+    }
+
+    .btn-enter:hover {
+      background: var(--mahogany);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-top: 3rem;
+      width: 100%;
+      max-width: 1000px;
+    }
+
+    .feature-card {
+      background: var(--cream);
+      border: 1px solid var(--gold);
+      padding: 1.5rem;
+      text-align: center;
+    }
+
+    .feature-icon {
+      font-size: 2.5rem;
+      color: var(--burgundy);
+      margin-bottom: 1rem;
+    }
+
+    .feature-title {
+      font-family: 'Playfair Display', serif;
+      color: var(--mahogany);
+      margin-bottom: 0.5rem;
+    }
+
+    footer {
+      background: var(--burgundy);
+      color: var(--ivory);
+      text-align: center;
+      padding: 1.5rem;
+      font-family: 'Cinzel', serif;
+      letter-spacing: 1px;
+      font-size: 0.9rem;
+    }

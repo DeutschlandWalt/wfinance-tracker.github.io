@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>W | Tracker</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Cinzel:wght@400;700&family=Montserrat:wght@300;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="themebut.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+  <header class="header">
+    <h1 class="logo">W | Tracker</h1>
+    <button id="themeToggle" class="theme-btn">🌙</button>
+    <div class="nav-buttons">
+      <button id="addTransactionBtn" class="nav-btn nav-btn-primary">+ Add note</button>
+      <button id="exportBtn" class="nav-btn nav-btn-secondary">Export data</button>
+    </div>
+  </header>
+
+  <main class="finance-container">
+    <!-- Модальное окно добавления -->
+    <div class="modal" id="transactionModal">
+      <div class="modal-content card-3d">
+        <h2>New operation</h2>
+        <form id="transactionForm">
+          <div class="form-group">
+            <label>Type</label>
+            <select id="type" class="form-control" required>
+              <option value="income">Income</option>
+              <option value="expense">Outlay</option>
+            </select>
+          </div>
+          <div class="form-group">
+            <label>Amount ($)</label>
+            <input type="number" id="amount" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Category</label>
+            <input type="text" id="category" class="form-control" required>
+          </div>
+          <div class="form-group">
+            <label>Date</label>
+            <input type="date" id="date" class="form-control" required>
+          </div>
+          <button type="submit" class="btn-neon">Сохранить</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- Основной контент -->
+    <div class="card-3d main-card">
+      <div class="balance-container">
+        <div class="balance-card">
+          <h3>Total Balance</h3>
+          <div class="amount" id="totalBalance">0 $</div>
+        </div>
+        <div class="balance-card income">
+          <h3>Income</h3>
+          <div class="amount" id="totalIncome">0 $</div>
+        </div>
+        <div class="balance-card expense">
+          <h3>Outlay</h3>
+          <div class="amount" id="totalExpense">0 $</div>
+        </div>
+      </div>
+
+      <div class="transactions-table-container">
+        <table class="transactions-table" id="transactionsTable">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Category</th>
+              <th>Type</th>
+              <th>Amount</th>
+              <th>Action</th>
+            </tr>
+          </thead>
+          <tbody></tbody>
+        </table>
+      </div>
+
+      <div class="charts-container">
+        <canvas id="financeChart"></canvas>
+      </div>
+    </div>
+  </main>
+
+  <!-- To-Do List -->
+  <aside class="todo-container">
+    <div class="todo-card">
+      <h2>To do list</h2>
+      <form id="todoForm" class="todo-form">
+        <input type="text" id="todoInput" class="todo-input" placeholder="Add task.." required>
+        <button type="submit" class="todo-submit">+</button>
+      </form>
+      <ul class="todo-list" id="todoList"></ul>
+    </div>
+  </aside>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="finance.js"></script>
+  <script src="themebutt.js"></script>
+</body>
+</html>

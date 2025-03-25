@@ -1,0 +1,48 @@
+body {
+    background-color: #F8F4E9;
+    color: #050202;
+  }
+  
+  body.dark-mode {
+    background-color: #1a0a0a;
+    color: #000000;
+  }
+  
+  body.dark-mode .card-3d {
+    background-color: #2a1212;
+    color: #e0d6c8;
+  }
+  
+  body.dark-mode .header {
+    background-color: #3a1a1a;
+  }
+  
+  .theme-btn {
+    background: #800020;
+    color: white;
+    border: none;
+    padding: 8px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    font-family: 'Cinzel', serif;
+  }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+      --ivory: #1A1A1A; /* Меняем цвета для тёмной темы */
+      --charcoal: #F0F0F0;
+    }
+  }
+.mobile-menu-button {
+    display: none;
+  }
+  @media (max-width: 768px) {
+    .mobile-menu-button {
+      display: block;
+    }
+  }
+  .button {
+    padding: 12px 24px;
+    min-width: 48px;
+    min-height: 48px;
+  }
